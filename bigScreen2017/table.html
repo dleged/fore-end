@@ -1,0 +1,119 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无缝向上滚动</title>
+<style>
+*{margin:0;padding:0;font-size:12px;box-sizing: border-box;}
+li{list-style:none;}
+.scroll-box{
+	margin:20px;
+	width:100%;
+	height:50px;
+	padding:10px;
+	overflow:hidden;
+}
+.scroll-box .scroll-ul li{
+	line-height:25px;
+	overflow: hidden;
+	color: red;
+}
+.scroll-box .scroll-ul span{
+	font-size: 18px;
+}
+.fixed-head{
+	line-height: 50px;
+}
+.fixed-head .title{
+	float: left;
+	line-height: 50px;
+	color: #00FFBF;
+	text-align: center;
+	font-size: 18px;
+}
+.text-l{
+	text-align: left;
+}
+.text-c{
+	text-align: center;
+}
+.w-25{
+	float: left;
+	width: 25%;
+}
+.w-100{
+	width: 100%;
+}
+.pad-10{
+	padding: 10px;
+}
+.pl-10{
+	padding-left: 10px;
+}
+</style>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+<div class="scroll-wrap w-100">
+	<ul class="fixed-head">
+		<li>
+			<span class="w-25 title">时间</span>
+			<span class="w-25 title">名称</span>
+			<span class="w-25 title">源地址</span>
+			<span class="w-25 title">目的地址</span>
+		</li>
+	</ul>
+	<div class="scroll-box">
+	 	<ul class="scroll-ul text-c">
+			<li>
+				<span class="w-25">09-08 10:21</span>
+				<span class="w-25">事件名称1</span>
+				<span class="w-25">21.2.3.5</span>
+				<span class="w-25">21.2.3.6</span>
+			</li>
+	 	</ul>
+	</div>
+</div>
+<script>
+/*
+* scrollTop 0.1
+* Dependence jquery-1.7.1.js
+*/
+;(function ($) {
+	/*表格滚动*/
+    var scrollTop = function (options) {
+        var defaults = {
+            speed: 30
+        }
+        var opts = $.extend(defaults, options);
+        this.each(function () {
+            var $timer;
+            var scroll_top = 0;
+            var obj = $(this);
+            var $height = obj.find("ul").height();
+            var $objHeight = $(this).height();
+            if($height < $objHeight){return false};
+            obj.find("ul").clone().appendTo(obj);
+            obj.hover(function () {
+                clearInterval($timer);
+            }, function () {
+                $timer = setInterval(function () {
+                    scroll_top++;
+                    if (scroll_top > $height) {
+                        scroll_top = 0;
+                    }
+                    obj.find("ul").first().css("margin-top", -scroll_top);
+                }, opts.speed);
+            }).trigger("mouseleave");
+        })
+    }
+    $.fn.scrollTop = scrollTop;
+})(jQuery)
+</script>
+<script>
+$(function(){
+ $(".scroll-box").scrollTop({
+  speed:130 //数值越大 速度越慢
+  });
+})
+</script>
+
+</body></html>
