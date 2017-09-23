@@ -1,0 +1,334 @@
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-user-select:none;
+	font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
+	box-sizing: border-box;
+}
+body{
+	font-size: 13px;
+	color: #333;
+	
+}
+ul,li{
+	list-style: none;
+}
+
+.show{
+	display: block !important;
+}
+.hide{
+	display: none !important;
+}
+
+/*top*/
+.index-top{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 70px;
+	background: #fff;
+	border-bottom: 1px solid #f3f3f3;
+	font-size: 14px;
+	padding: 0 30px;
+	box-shadow: 0 2px 2px #f3f3f3;
+	z-index: 10;
+	min-width: 1100px;
+}
+
+.top-logo{
+	width: 170px;
+	height: 100%;
+	float: left;
+	padding-top: 15px;
+}
+.top-logo img{
+	height: 35px;
+	float: left;
+	display: inline-block;
+	cursor: pointer;
+}
+.top-menu{
+	width: auto;
+	height: 100%;
+	padding-top: 10px;
+	float: left;
+	
+}
+.top-menu ul{
+	height: 100%;
+	overflow: hidden;
+	float: left;
+	padding:0 15px;
+}
+.top-menu ul li{
+	float: left;
+	margin:0 15px;
+	line-height: 60px;
+	cursor: pointer;
+}
+.top-menu ul li.active{
+	color: #2db0fe;
+}
+
+.top-right{
+	float: right;
+	padding-top: 25px;
+}
+.top-right span{
+	float: left;
+	padding-left: 25px;
+	background-size: auto 20px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	height: 25px;
+	cursor: pointer;
+	line-height: 30px;
+	color: #b8b8b8;
+}
+.top-right .top-line{
+	padding: 0;
+	margin: 3px 20px;
+	width: 1px;
+	height: 20px;
+	background-color: #b8b8b8;
+}
+.top-search{
+	background-image: url(../images/search_btn.png);
+}
+.top-user{
+	background-image: url(../images/user.png);
+}
+.top-help{
+	margin-left: 40px;
+	background-image: url(../images/help.png);
+}
+
+
+
+
+
+.index-left{
+	width: 185px;
+	position: absolute;
+	left: 0;
+	top: 70px;
+	bottom: 0;
+	background: #f8f8f8;
+	border-right: 1px solid #ececec;
+	overflow: hidden;
+	overflow-y: auto;
+	transition: width 0.5s;
+	z-index: 10;
+}
+.index-left-title{
+	background: #f8f8f8;
+	border-bottom: 1px solid #ececec;
+	line-height: 50px;
+	padding: 0 17px;
+	overflow: hidden;
+	cursor: pointer;
+	width: 185px;
+	transition: padding 0.5s;
+}
+.left-logo{
+	float: left;
+	height: 50px;
+	width: 24px !important;
+	margin-right: 13px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: auto 20px;
+}
+
+.icon-workbench{
+	background-image: url(../images/icon05.png);
+}
+.icon-overview{
+	background-image: url(../images/icon08.png);
+}
+.icon-assets{
+	background-image: url(../images/icon07.png);
+}
+.icon-ability{
+	background-image: url(../images/icon06.png);
+}
+.icon-arrow{
+	background-image: url(../images/down.png);
+}
+.icon-arrow.icon-arrow1{
+	transform: rotate(180deg);
+}
+.left-text{
+	float: left;
+	height: 100%;
+	width: 93px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.left-btn{
+	height: 50px;
+	width: 15px;
+	float: left;
+	cursor: pointer;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 10px auto;
+}
+.index-left-div ul{
+	display: none;
+	margin: 0;
+}
+.index-left-div li{
+	padding: 0 17px;
+	background: #f8f8f8;
+	border-bottom: 1px solid #ececec;
+	line-height: 50px;
+	overflow: hidden;
+	cursor: pointer;
+	width: 185px;
+	transition: padding 0.5s;
+}
+.index-left-div li.active{
+	background: #fcfcfc;
+	color: #2DB0FE;
+}
+
+.index-left-hide{
+	width:40px;
+	overflow: hidden;
+}
+.index-left-hide .index-left-div li{
+	padding: 0 8px;
+}
+.index-left-hide .index-left-title{
+	padding: 0 8px;
+}
+
+.index-tmenu{
+	position: absolute;
+	top: 70px;
+	left: 0;
+	right: 0;
+	min-width: 1100px;
+	height: 50px;
+	border-bottom: 1px solid #ececec;
+	background: #f8f8f8;
+	padding-top: 12px;
+	color: #999;
+}
+.index-tmenu ul{
+	padding: 0 38px;
+	line-height: 36px;
+	float: left;
+}
+.index-tmenu li{
+	float: left;
+	padding: 0 10px;
+	margin: 0 3px;
+	border: 1px solid #f8f8f8;
+	border-top: 2px solid #f8f8f8;
+	border-bottom: 0;
+	height: 37px;
+	cursor: pointer;
+	position: relative;
+}
+.index-tmenu li.index-li-select{
+	padding-right: 20px;
+}
+.index-tmenu li.index-li-select:before{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 8px;
+	height: 100%;
+	right: 5px;
+	top: 0;
+	background: url(../images/down.png) no-repeat center center;
+	background-size: 8px auto;
+}
+.index-tmenu li.index-li-select.active:before{
+	transform: rotate(180deg);
+}
+.index-tmenu li.active{
+	border: 1px solid #ececec;
+	border-top: 2px solid #2db0fe;
+	border-bottom: 0;
+	height: 38px;
+	color: #2db0fe;
+	background: #fff;
+	border-radius: 3px 3px 0 0;
+}
+.index-tmenu li>.inmenu-select{
+	position: absolute;
+	width: 100%;
+	height: 0;
+	line-height: 36px;
+	border: 0px solid #ececec;
+	background: #fff;
+	top: 37px;
+	left: 0;
+	z-index: 10;
+	transition: height 0.5s;
+	overflow: hidden;
+}
+.index-tmenu li.active>.inmenu-select.active{
+	border-width: 1px;
+	height: auto;
+}
+.index-tmenu li .inmenu-select span{
+	width: 100%;
+	padding: 0 10px;
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.index-tmenu li .inmenu-select span:hover{
+	background: #2db0fe;
+	color: #fff;
+}
+.index-tmenu li .inmenu-select span.active{
+	background: #2db0fe;
+	color: #fff;
+}
+.index-tmenu-right{
+	float: right;
+	line-height: 38px;
+	padding: 0 20px;
+}
+.index-tmenu-right span{
+	float: left;
+	margin: 0 10px;
+	cursor: pointer;
+}
+.index-tmenu-right span.top-line{
+	margin: 0;
+	width: 1px;
+	height: 15px;
+	background: #999;
+	margin-top: 11px;
+}
+.index-page1{
+	position: absolute;
+	top: 120px;
+	bottom: 0;
+	right: 0;
+	left: 0px;
+	overflow: auto;
+}
+.index-page2{
+	display: block;
+	position: absolute;
+	top: 70px;
+	bottom: 0;
+	right: 0;
+	left: 185px;
+	transition: left 0.5s;
+	overflow: auto;
+}
+.index-page2.take-back{
+	left: 40px;
+}

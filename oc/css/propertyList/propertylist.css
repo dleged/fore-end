@@ -1,0 +1,116 @@
+.property-content {
+	margin:11px;
+	border:#ececec solid 1px;
+	height:96%;
+	position: relative;
+	overflow-y: auto;
+}
+
+.property-content .pr-50 {
+	padding-right: 50px;
+}
+
+.top-condition{
+	height: 40px;
+	position: relative;
+	padding-left: 90px;
+}
+
+
+
+.property-content .top-condition span {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+    font-size: 13px;
+}
+.property-content .top-condition span.head {
+    text-align: right;
+    padding: 12px 0px;
+    width: 90px;
+    left: 0;
+    position: absolute;
+}
+
+.property-content .top-condition span.arrowdown {
+    background-image: url(../../images/down.png);
+    background-repeat: no-repeat;
+    width: 50px;
+    height:40px;
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.property-content .top-condition span.body {
+	border-bottom: 1px #ececec dashed;
+}
+
+.bd-b-s {
+	border-bottom:#ececec solid 1px
+}
+
+.top-condition input{
+	height:100%;
+	width:100%;
+	border:none;
+	padding-left: 20px;
+}
+.top-condition input:focus{
+	outline: none;
+	outline-offset: 0;
+}
+
+.top-condition ul{
+	margin-bottom: 0;
+	margin-left: 8px;
+}
+
+ .top-condition ul li{
+	display: inline-block;
+	margin-right:26px;
+    padding: 12px 13px;
+	color: #666666;
+	cursor: pointer;
+}
+
+ .top-condition ul li.active{
+ 	background-color: #2db0fe;
+    text-align: center;
+    border-radius: 12px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    color:white;
+ }
+ 
+ .top-condition .bacground-li-top li {
+    border-radius: 15px;
+    padding-right: 35px;
+    border:none;
+    cursor:pointer;
+    position: absolute;
+}
+ 
+  .bacground-li-top li.searchBtn{
+  	background: #9cc715;
+  	padding:3px 25px;
+  	color: white;
+  	right: 12px;
+    top: 8px;
+ }
+ 
+  .bacground-li-top li.clearBtn{
+  	color: #9cc715;
+  	right: 85px;
+    top: -2px;
+   
+ }
+ 
+
+
+
+
+
+
